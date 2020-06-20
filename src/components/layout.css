@@ -620,3 +620,10 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+.bg-img {
+  height: 30vw;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}

@@ -1,22 +1,29 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import BackgroundImageSection from "../components/backgroundImage"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+
     <div>
+      <h2>reusable gatsby img component</h2>
       <Image filename={"gatsby-astronaut.png"} alt="" />
-      <Image filename={"gatsby-icon.png"} alt="" />
+      <h2 style={{margin:'100px 0'}}>reusable gatsby background img component</h2>
+      <BackgroundImageSection
+        filename={"gatsby-astronaut.png"}
+        className={"bg-img"}
+        innerContent={
+          <>
+            <h2>inner heading</h2>
+            <p>inner paragraph</p>
+          </>
+        }
+      />
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   </Layout>
 )
 
